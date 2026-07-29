@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rise of Global Life Expectancy</title>
+
+    <!-- Core D3 Library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Required d3-annotation Extension (fixed: rawgit.com has been shut down for years) -->
+    <script src="https://cdn.jsdelivr.net/npm/d3-svg-annotation@2.5.1/d3-annotation.min.js"></script>
+
+    <!-- External Stylesheet Links -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="narrative-wrapper">
+        <h1 class="main-title">The Rise of Global Life Expectancy</h1>
+
+        <!-- Linear Navigation Buttons -->
+        <div class="navigation-controls">
+            <button id="prev" class="nav-btn">← Backwards</button>
+            <span id="scene-indicator" class="scene-indicator"></span>
+            <button id="next" class="nav-btn">Forwards →</button>
+        </div>
+
+        <!-- Explanatory Context Content Blocks -->
+        <div id="description" class="narrative-description"></div>
+        <div id="annotation" class="narrative-meta-text"></div>
+
+        <p class="hint-text">Hover over any bubble to see that country's exact statistics.</p>
+
+        <!-- Principal SVG Target Area Canvas -->
+        <div class="canvas-holder">
+            <svg id="chart" width="900" height="500"></svg>
+        </div>
+    </div>
+
+    <!-- Free-form User Exploration Tooltip Element -->
+    <div id="tooltip" class="chart-tooltip"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
