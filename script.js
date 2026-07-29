@@ -41,8 +41,8 @@ const scenes = [
         text: "Following World War II, global life expectancy was heavily constrained by wealth. A distinct gap separated isolated Western markets from emerging nations, where average lifespans rarely surpassed 45 years.",
         annotate(filtered) {
             return buildAnnotations(filtered, [
-                { country: "United States", title: "Wealth Disparity", label: "Western nations sit isolated at high wealth and health metrics.", dx: -110, dy: 50 },
-                { country: "Nigeria", title: "Sub-Saharan Baseline", label: "Many nations remain pinned below 40 years of life expectancy.", dx: 60, dy: -50 }
+                { country: "United States", title: "Wealth Disparity", label: "Western nations sit isolated at high wealth and health metrics.", dx: 30, dy: -110 },
+                { country: "Nigeria", title: "Sub-Saharan Baseline", label: "Many nations remain pinned below 40 years of life expectancy.", dx: -50, dy: 65 }
             ]);
         }
     },
