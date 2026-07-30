@@ -42,7 +42,7 @@ const scenes = [
         annotate(filtered) {
             return buildAnnotations(filtered, [
                 { country: "United States", title: "Wealth Disparity", label: "Western nations sit isolated at high wealth and health metrics.", dx: 30, dy: -110 },
-                { country: "Nigeria", title: "Sub-Saharan Baseline", label: "Many nations remain pinned below 40 years of life expectancy.", dx: -50, dy: 65 }
+                { country: "Nigeria", title: "Sub-Saharan Baseline", label: "Many nations remain pinned below 40 years of life expectancy.", dx: -50, dy: 30, wrap: 210 }
             ]);
         }
     },
@@ -134,7 +134,7 @@ function buildAnnotations(filtered, specs) {
             const d = filtered.find(row => row.country === spec.country);
             if (!d) return null;
             return {
-                note: { title: spec.title, label: spec.label, wrap: 180 },
+                note: { title: spec.title, label: spec.label, wrap: spec.wrap || 180 },
                 x: xScale(d.gdpPercap),
                 y: yScale(d.lifeExp),
                 dx: spec.dx,
